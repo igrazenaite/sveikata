@@ -62,6 +62,6 @@ fabric.properties
 
 .idea/
 
-.project/
-.classpath/
+.project
+.classpath
 # End of https://www.gitignore.io/api/intellij+all
