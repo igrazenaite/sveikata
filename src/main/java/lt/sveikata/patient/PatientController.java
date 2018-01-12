@@ -18,7 +18,7 @@ public class PatientController {
 	private PatientService patientService;
 
 	@RequestMapping(value = "/allPatients", method = RequestMethod.GET)
-	public List<PatientForClient> giveAllPatiens() {
+	public List<PatientForClient> giveAllPatients() {
 		return getPatientService().receiveAllPatients();
 	}
 
@@ -28,11 +28,11 @@ public class PatientController {
 		patientService.addNewPatient(newPatient);
 	}
 
-	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deletePatientFromDatabase(@PathVariable final Long id) {
-		patientService.deletePatient(id);
-	}
+//	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
+//	@ResponseStatus(HttpStatus.NO_CONTENT)
+//	public void deletePatientFromDatabase(@PathVariable final Long id) {
+//		patientService.deletePatient(id);
+//	}
 
 	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)

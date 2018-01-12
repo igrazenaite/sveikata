@@ -45,9 +45,9 @@ public class PharmacistService {
 
 	}
 
-	public void deletePharmacist(Long id) {
-		pharmacistRepository.delete(id);
-	}
+//	public void deletePharmacist(Long id) {
+//		pharmacistRepository.delete(id);
+//	}
 
 	public void updatePharmacist(Pharmacist pharmacist, Long id) {
 		Pharmacist pharm = pharmacistRepository.findOne(id);

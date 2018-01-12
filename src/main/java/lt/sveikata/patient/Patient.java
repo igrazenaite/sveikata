@@ -14,7 +14,7 @@ public class Patient {
 	private long id;
 	private String firstName;
 	private String lastName;
-	private long dateOfBirth;
+	private String dateOfBirth;
 	@Column(unique = true)
 	private long personalId;
 	private final String codeOfUserRights = "3";
@@ -43,11 +43,11 @@ public class Patient {
 		this.lastName = lastName;
 	}
 
-	public long getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(long dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 

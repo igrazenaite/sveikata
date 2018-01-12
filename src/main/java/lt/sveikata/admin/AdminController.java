@@ -29,11 +29,11 @@ public class AdminController {
 		adminService.addNewAdmin(newAdmin);
 	}
 
-	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteAdminFromDatabase(@PathVariable final Long id) {
-		adminService.deleteAdmin(id);
-	}
+//	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
+//	@ResponseStatus(HttpStatus.NO_CONTENT)
+//	public void deleteAdminFromDatabase(@PathVariable final Long id) {
+//		adminService.deleteAdmin(id);
+//	}
 
 	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)

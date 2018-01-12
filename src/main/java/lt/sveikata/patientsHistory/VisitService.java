@@ -55,15 +55,15 @@ public class VisitService {
 //		prescriptionRepository.delete(id);
 //	}
 
-//	public void updateVisit(Visit visit, Long id) {
-//		Visit vis = visitRepository.findOne(id);
-//		vis.setDateOfVisit(visit.getDateOfVisit());
-//		vis.setIllnessTLKCode(visit.getIllnessTLKCode());
-//		vis.setDoctorsFullName(visit.getDoctorsFullName());
-//		vis.setLengthOfVisit(visit.getLengthOfVisit());
-//		vis.setDescription(visit.getDescription());
-//		vis.setCompensated(visit.isCompensated());
-//		vis.setVisitIsRepeated(visit.isVisitIsRepeated());
-//		visitRepository.save(visit);
-//	}
+	public void updateVisit(Visit visit, Long id) {
+		Visit vis = visitRepository.findOne(id);
+		vis.setDateOfVisit(visit.getDateOfVisit());
+		vis.setIllnessTLKCode(visit.getIllnessTLKCode());
+		vis.setDoctorsFullName(visit.getDoctorsFullName());
+		vis.setLengthOfVisit(visit.getLengthOfVisit());
+		vis.setDescription(visit.getDescription());
+		vis.setCompensated(visit.isCompensated());
+		vis.setVisitIsRepeated(visit.isVisitIsRepeated());
+		visitRepository.save(visit);
+	}
 }

@@ -41,9 +41,9 @@ public class AdminService {
 
 	}
 
-	public void deleteAdmin(Long id) {
-		adminRepository.delete(id);
-	}
+//	public void deleteAdmin(Long id) {
+//		adminRepository.delete(id);
+//	}
 
 	public void updateAdmin(Admin admin, Long id) {
 		Admin adm = adminRepository.findOne(id);

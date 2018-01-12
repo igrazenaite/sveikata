@@ -4,7 +4,7 @@ public class PatientForClient {
 
 	private String firstName;
 	private String lastName;
-	private long dateOfBirth;
+	private String dateOfBirth;
 	private long personalId;
 
 	public String getFirstName() {
@@ -23,11 +23,11 @@ public class PatientForClient {
 		this.lastName = lastName;
 	}
 
-	public long getDateOfBirth() {
+	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
 
-	public void setDateOfBirth(long dateOfBirth) {
+	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
 

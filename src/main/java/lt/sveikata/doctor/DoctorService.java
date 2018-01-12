@@ -45,9 +45,9 @@ public class DoctorService {
 
 	}
 
-	public void deleteDoctor(Long id) {
-		doctorRepository.delete(id);
-	}
+//	public void deleteDoctor(Long id) {
+//		doctorRepository.delete(id);
+//	}
 
 	public void updateDoctor(Doctor doctor, Long id) {
 		Doctor doc = doctorRepository.findOne(id);

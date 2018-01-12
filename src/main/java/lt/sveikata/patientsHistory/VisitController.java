@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,12 +36,12 @@ public class VisitController {
 	// visitService.deleteVisit(id);
 	// }
 
-//	@RequestMapping(/*value = "/doctor/visit/manageVisit", */path = "/{id}", method = RequestMethod.PUT)
-//	@ResponseStatus(HttpStatus.CREATED)
-//	public void updateExistingVisit(@RequestBody final Visit visit, @PathVariable final Long id) {
-//		visitService.updateVisit(visit, id);
-//	}
-//
+	@RequestMapping(/*value = "/doctor/visit/manageVisit", */path = "/{id}", method = RequestMethod.PUT)
+	@ResponseStatus(HttpStatus.CREATED)
+	public void updateExistingVisit(@RequestBody final Visit visit, @PathVariable final Long id) {
+		visitService.updateVisit(visit, id);
+	}
+
 	public VisitService getVisitService() {
 		return visitService;
 	}

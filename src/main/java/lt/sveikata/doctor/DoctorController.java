@@ -30,11 +30,11 @@ public class DoctorController {
 		doctorService.addNewDoctor(newDoctor);
 	}
 
-	@RequestMapping(/*value = "/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deleteDoctorFromDatabase(@PathVariable final Long id) {
-		doctorService.deleteDoctor(id);
-	}
+//	@RequestMapping(/*value = "/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
+//	@ResponseStatus(HttpStatus.NO_CONTENT)
+//	public void deleteDoctorFromDatabase(@PathVariable final Long id) {
+//		doctorService.deleteDoctor(id);
+//	}
 
 	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)

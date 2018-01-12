@@ -44,10 +44,10 @@ public class PatientService {
 		patientRepository.save(pat);
 
 	}
-
-	public void deletePatient(Long id) {
-		patientRepository.delete(id);
-	}
+//
+//	public void deletePatient(Long id) {
+//		patientRepository.delete(id);
+//	}
 
 	public void updatePatient(Patient patient, Long id) {
 		Patient pat = patientRepository.findOne(id);

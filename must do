@@ -1,0 +1,9 @@
+fix gitignore file before pushing to new remote
+
+needs to be:
+
+.project
+.classpath
+/target
+
+maybe something else...

@@ -29,11 +29,11 @@ public class PharmacistController {
 		pharmacistService.addNewPharmacist(newPharmacist);
 	}
 
-	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
-	@ResponseStatus(HttpStatus.NO_CONTENT)
-	public void deletePharmacistFromDatabase(@PathVariable final Long id) {
-		pharmacistService.deletePharmacist(id);
-	}
+//	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.DELETE)
+//	@ResponseStatus(HttpStatus.NO_CONTENT)
+//	public void deletePharmacistFromDatabase(@PathVariable final Long id) {
+//		pharmacistService.deletePharmacist(id);
+//	}
 
 	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)
