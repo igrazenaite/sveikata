@@ -37,6 +37,9 @@ public class AdminService {
 		Admin adm = new Admin();
 		adm.setFirstName(newAdmin.getFirstName());
 		adm.setLastName(newAdmin.getLastName());
+		adm.setUserName(newAdmin.getUserName());
+		adm.setPassword(newAdmin.getPassword());
+		adm.setSuspended(newAdmin.isSuspended());
 		adminRepository.save(adm);
 
 	}
@@ -49,6 +52,8 @@ public class AdminService {
 		Admin adm = adminRepository.findOne(id);
 		adm.setFirstName(admin.getFirstName());
 		adm.setLastName(admin.getLastName());
+		//adm.setUserType("suspended");
+		adm.setSuspended(admin.isSuspended());
 		adminRepository.save(adm);
 	}
 

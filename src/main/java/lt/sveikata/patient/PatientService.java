@@ -41,6 +41,8 @@ public class PatientService {
 		pat.setLastName(newPatient.getLastName());
 		pat.setDateOfBirth(newPatient.getDateOfBirth());
 		pat.setPersonalId(newPatient.getPersonalId());
+		pat.setUserName(newPatient.getUserName());
+		pat.setPassword(newPatient.getPassword());
 		patientRepository.save(pat);
 
 	}
@@ -49,12 +51,13 @@ public class PatientService {
 //		patientRepository.delete(id);
 //	}
 
-	public void updatePatient(Patient patient, Long id) {
-		Patient pat = patientRepository.findOne(id);
+	public void updatePatient(Patient patient, Long personalId) {
+		Patient pat = patientRepository.findOne(personalId);
 		pat.setFirstName(patient.getFirstName());
 		pat.setLastName(patient.getLastName());
 		pat.setDateOfBirth(patient.getDateOfBirth());
 		pat.setPersonalId(patient.getPersonalId());
 		patientRepository.save(pat);
 	}
+	
 }

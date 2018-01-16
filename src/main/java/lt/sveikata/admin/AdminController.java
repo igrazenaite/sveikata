@@ -23,7 +23,7 @@ public class AdminController {
 		return getAdminService().receiveAllAdmins();
 	}
 
-	@RequestMapping(value = "/addNew", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/admin", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void createAdmin(@RequestBody final AddNewAdmin newAdmin) {
 		adminService.addNewAdmin(newAdmin);
@@ -35,7 +35,7 @@ public class AdminController {
 //		adminService.deleteAdmin(id);
 //	}
 
-	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/admin/findUser/manageUser/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void updateExistingAdmin(@RequestBody final Admin admin, @PathVariable final Long id) {
 		adminService.updateAdmin(admin, id);

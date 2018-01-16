@@ -9,14 +9,17 @@ import javax.persistence.Id;
 @Entity
 public class AddNewPatient {
 
-	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
+	@Id
+	@Column(unique = true)
+	private long personalId;
 	private String firstName;
 	private String lastName;
 	private String dateOfBirth;
-	@Column(unique = true)
-	private long personalId;
+	private String userName;
+	private String password;
+
 	private final String codeOfUserRights = "3";
 
 	public long getId() {
@@ -57,6 +60,22 @@ public class AddNewPatient {
 
 	public void setPersonalId(long personalId) {
 		this.personalId = personalId;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public String getCodeOfUserRights() {

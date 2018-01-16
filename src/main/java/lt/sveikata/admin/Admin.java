@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Admin {
@@ -14,6 +15,13 @@ public class Admin {
 	private long id;
 	private String firstName;
 	private String lastName;
+	@Column(unique = true)
+	private String userName;
+	private String password;
+	//private String userType = "admin";
+	@NotNull
+	private boolean isSuspended = false;
+
 	private final String codeOfUserRights = "0";
 
 	public long getId() {
@@ -38,6 +46,38 @@ public class Admin {
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
+	}
+
+//	public String getUserType() {
+//		return userType;
+//	}
+//
+//	public void setUserType(String userType) {
+//		this.userType = userType;
+//	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public boolean isSuspended() {
+		return isSuspended;
+	}
+
+	public void setSuspended(boolean isSuspended) {
+		this.isSuspended = isSuspended;
 	}
 
 	public String getCodeOfUserRights() {

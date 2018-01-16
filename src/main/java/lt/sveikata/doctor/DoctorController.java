@@ -24,7 +24,7 @@ public class DoctorController {
 		return getDoctorService().receiveAllDoctors();
 	}
 
-	@RequestMapping(value = "/addNew", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/doctor", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void createDoctor(@RequestBody final AddNewDoctor newDoctor) {
 		doctorService.addNewDoctor(newDoctor);
@@ -36,7 +36,7 @@ public class DoctorController {
 //		doctorService.deleteDoctor(id);
 //	}
 
-	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/admin/findUser/manageUser/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void updateExistingDoctor(@RequestBody final Doctor doctor, @PathVariable final Long id) {
 		doctorService.updateDoctor(doctor, id);

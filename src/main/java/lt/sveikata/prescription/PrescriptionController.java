@@ -36,7 +36,7 @@ public class PrescriptionController {
 	// prescriptionService.deletePrescription(id);
 	// }
 
-	@RequestMapping(/*value = "/doctor/prescription/managePrescription", */path = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/doctor/prescription/managePrescription/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void updateExistingPrescription(@RequestBody final Prescription prescription, @PathVariable final Long id) {
 		prescriptionService.updatePrescription(prescription, id);

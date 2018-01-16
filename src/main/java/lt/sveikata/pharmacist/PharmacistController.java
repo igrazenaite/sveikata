@@ -23,7 +23,7 @@ public class PharmacistController {
 		return getPharmacistService().receiveAllPharmacists();
 	}
 
-	@RequestMapping(value = "/addNew", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/pharmacist", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void createPharmacist(@RequestBody final AddNewPharmacist newPharmacist) {
 		pharmacistService.addNewPharmacist(newPharmacist);
@@ -35,7 +35,7 @@ public class PharmacistController {
 //		pharmacistService.deletePharmacist(id);
 //	}
 
-	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/admin/findUser/manageUser/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void updateExistingPharmacist(@RequestBody final Pharmacist pharmacist, @PathVariable final Long id) {
 		pharmacistService.updatePharmacist(pharmacist, id);

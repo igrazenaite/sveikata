@@ -36,7 +36,7 @@ public class VisitController {
 	// visitService.deleteVisit(id);
 	// }
 
-	@RequestMapping(/*value = "/doctor/visit/manageVisit", */path = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/doctor/visit/manageVisit/{id}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void updateExistingVisit(@RequestBody final Visit visit, @PathVariable final Long id) {
 		visitService.updateVisit(visit, id);

@@ -22,7 +22,7 @@ public class PatientController {
 		return getPatientService().receiveAllPatients();
 	}
 
-	@RequestMapping(value = "/addNew", method = RequestMethod.POST)
+	@RequestMapping(value = "/admin/patient", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public void createPatient(@RequestBody final AddNewPatient newPatient) {
 		patientService.addNewPatient(newPatient);
@@ -34,10 +34,10 @@ public class PatientController {
 //		patientService.deletePatient(id);
 //	}
 
-	@RequestMapping(/*value = "/admin/findUser/manageUser", */path = "/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/admin/findUser/manageUser/{personalId}", method = RequestMethod.PUT)
 	@ResponseStatus(HttpStatus.CREATED)
-	public void updateExistingPatient(@RequestBody final Patient patient, @PathVariable final Long id) {
-		patientService.updatePatient(patient, id);
+	public void updateExistingPatient(@RequestBody final Patient patient, @PathVariable final Long personalId) {
+		patientService.updatePatient(patient, personalId);
 	}
 
 	public PatientService getPatientService() {
